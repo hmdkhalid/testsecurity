@@ -2,7 +2,6 @@ package com.example.testsecurty.dao.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;  // ✅ Importer
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,7 +21,6 @@ import java.util.List;
 @Builder
 public class User implements UserDetails {
 
-    @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
